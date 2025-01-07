@@ -1,0 +1,44 @@
+<p>match-component works!</p>
+
+<form [formGroup]="matchForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="date">Date:</label>
+    <input id="date" formControlName="date" type="date">
+    <div *ngIf="matchForm.get('date')?.invalid && matchForm.get('date')?.touched">
+      Date is required.
+    </div>
+  </div>
+  <div>
+    <label for="heure">Heure:</label>
+    <input id="heure" formControlName="heure" type="time">
+    <div *ngIf="matchForm.get('heure')?.invalid && matchForm.get('heure')?.touched">
+      Heure is required.
+    </div>
+  </div>
+  <div>
+    <label for="lieu">Lieu:</label>
+    <input id="lieu" formControlName="lieu" type="text">
+    <div *ngIf="matchForm.get('lieu')?.invalid && matchForm.get('lieu')?.touched">
+      Lieu is required.
+    </div>
+  </div>
+  <div>
+    <label for="equipeA">Equipe A:</label>
+    <select id="equipeA" formControlName="equipeA">
+      <!-- Options for equipes -->
+    </select>
+    <div *ngIf="matchForm.get('equipeA')?.invalid && matchForm.get('equipeA')?.touched">
+      Equipe A is required.
+    </div>
+  </div>
+  <div>
+    <label for="equipeB">Equipe B:</label>
+    <select id="equipeB" formControlName="equipeB">
+      <!-- Options for equipes -->
+    </select>
+    <div *ngIf="matchForm.get('equipeB')?.invalid && matchForm.get('equipeB')?.touched">
+      Equipe B is required.
+    </div>
+  </div>
+  <button type="submit" [disabled]="matchForm.invalid">Soumettre</button>
+</form>

@@ -1,0 +1,15 @@
+{
+    "menus": [
+      {
+        "id": 1,
+        "title": "Festive Dinner",
+        "image": "festive-dinner.jpg",
+        "description": "A sumptuous festive dinner.",
+        "mark": 4.5,
+        "approved": true,
+        "reservations": [1, 2]
+      }
+    ],
+    "reservations": []
+  }
+  
